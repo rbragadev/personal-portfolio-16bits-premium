@@ -1,0 +1,143 @@
+/* ---------------------------------------------------------------------------
+   Shared 16-bit visual effects. Defined once, reused by every screen.
+   --------------------------------------------------------------------------- */
+
+/* --- CRT scanlines -------------------------------------------------------- */
+/* Fixed overlay. Kept very subtle so it never harms body-text legibility. */
+.cq-scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(216, 227, 251, 0.045) 0px,
+    rgba(216, 227, 251, 0.045) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* --- Chiseled HUD panel --------------------------------------------------- */
+/* Light highlight top/left, dark shadow bottom/right = extruded stone bezel. */
+.cq-panel {
+  position: relative;
+  background-color: color-mix(in srgb, var(--cq-surface) 82%, transparent);
+  border: 1px solid var(--cq-outline-muted);
+  box-shadow:
+    inset 1px 1px 0 rgba(216, 227, 251, 0.09),
+    inset -1px -1px 0 rgba(4, 14, 31, 0.9);
+}
+
+.cq-panel--raised {
+  background-color: color-mix(in srgb, var(--cq-surface-high) 88%, transparent);
+}
+
+.cq-panel--inset {
+  background-color: var(--cq-surface-lowest);
+  box-shadow:
+    inset 2px 2px 0 rgba(4, 14, 31, 0.95),
+    inset -1px -1px 0 rgba(216, 227, 251, 0.05);
+}
+
+/* --- Corner rivets -------------------------------------------------------- */
+/* Four small gold squares pinned to a panel's corners. */
+.cq-corners > .cq-corner {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--cq-gold);
+  opacity: 0.75;
+}
+.cq-corner--tl { top: -1px; left: -1px; }
+.cq-corner--tr { top: -1px; right: -1px; }
+.cq-corner--bl { bottom: -1px; left: -1px; }
+.cq-corner--br { bottom: -1px; right: -1px; }
+
+/* --- Pixel text shadow ---------------------------------------------------- */
+/* Hard 2px offset, no blur — reads as a stamped 16-bit title. */
+.cq-pixel-text {
+  text-shadow: 2px 2px 0 rgba(4, 14, 31, 0.95);
+}
+
+.cq-pixel-text--gold {
+  text-shadow:
+    2px 2px 0 rgba(4, 14, 31, 0.95),
+    0 0 18px rgba(255, 215, 0, 0.35);
+}
+
+/* --- Ethereal glow -------------------------------------------------------- */
+.cq-glow-gold {
+  box-shadow: 0 0 0 1px rgba(255, 215, 0, 0.35), 0 0 22px -4px rgba(255, 215, 0, 0.45);
+}
+.cq-glow-purple {
+  box-shadow: 0 0 0 1px rgba(138, 43, 226, 0.4), 0 0 26px -4px rgba(138, 43, 226, 0.55);
+}
+
+/* --- Pixel-art image rendering -------------------------------------------- */
+.cq-pixelated {
+  image-rendering: pixelated;
+}
+
+/* --- Focus ring ----------------------------------------------------------- */
+/* Gold, offset, always visible — game aesthetics must not cost accessibility. */
+.cq-focusable:focus-visible {
+  outline: 2px solid var(--cq-gold);
+  outline-offset: 2px;
+}
+
+/* --- Animations ----------------------------------------------------------- */
+@keyframes cq-blink {
+  0%, 45% { opacity: 1; }
+  55%, 100% { opacity: 0.25; }
+}
+
+@keyframes cq-caret {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes cq-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes cq-bar-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes cq-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+.cq-blink { animation: cq-blink 1.4s steps(1, end) infinite; }
+.cq-caret { animation: cq-caret 1s steps(1, end) infinite; }
+.cq-float { animation: cq-float 2.4s ease-in-out infinite; }
+
+/* Page/section entrance. --cq-delay staggers sibling cards. */
+.cq-enter {
+  animation: cq-enter 220ms cubic-bezier(0.2, 0, 0.2, 1) both;
+  animation-delay: var(--cq-delay, 0ms);
+}
+
+/* Segmented bars grow from the left on first paint. */
+.cq-bar-fill {
+  transform-origin: left center;
+  animation: cq-bar-fill 520ms cubic-bezier(0.2, 0, 0.2, 1) both;
+  animation-delay: var(--cq-delay, 0ms);
+}
+
+/* --- Reduced motion ------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

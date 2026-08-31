@@ -1,0 +1,47 @@
+/* ---------------------------------------------------------------------------
+   Design tokens — derived from the Stitch "Ethereal Engine Portfolio" DESIGN.md
+   Edit colours/spacing here; never hard-code hex values inside components.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* Surfaces (deep midnight navy base) */
+  --cq-bg: #081425;
+  --cq-surface-lowest: #040e1f;
+  --cq-surface-low: #111c2d;
+  --cq-surface: #152031;
+  --cq-surface-high: #1f2a3c;
+  --cq-surface-highest: #2a3548;
+
+  /* Text */
+  --cq-text: #d8e3fb;
+  --cq-text-muted: #d0c6ab;
+  --cq-text-dim: #8b97ad;
+
+  /* Lines */
+  --cq-outline: #999077;
+  --cq-outline-muted: #4d4732;
+
+  /* Accents */
+  --cq-gold: #ffd700;
+  --cq-gold-soft: #e9c400;
+  --cq-gold-dim: #705e00;
+  --cq-purple: #7701d0;
+  --cq-purple-soft: #dcb8ff;
+  --cq-purple-bright: #8a2be2;
+  --cq-success: #10b981;
+  --cq-error: #ef4444;
+
+  /* Type */
+  --cq-font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --cq-font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Rhythm — strict 4px base keeps the blocky pixel alignment */
+  --cq-unit: 4px;
+  --cq-gutter: 24px;
+  --cq-panel-padding: 20px;
+  --cq-shell-max: 1440px;
+  --cq-sidebar-w: 256px;
+
+  /* Motion */
+  --cq-transition: 180ms cubic-bezier(0.2, 0, 0.2, 1);
+}

@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+
+@import './tokens.css';
+@import './effects.css';
+
+/* Expose the design tokens to Tailwind utilities (bg-surface, text-gold, ...) */
+@theme {
+  --color-bg: var(--cq-bg);
+  --color-surface-lowest: var(--cq-surface-lowest);
+  --color-surface-low: var(--cq-surface-low);
+  --color-surface: var(--cq-surface);
+  --color-surface-high: var(--cq-surface-high);
+  --color-surface-highest: var(--cq-surface-highest);
+
+  --color-ink: var(--cq-text);
+  --color-ink-muted: var(--cq-text-muted);
+  --color-ink-dim: var(--cq-text-dim);
+
+  --color-outline: var(--cq-outline);
+  --color-outline-muted: var(--cq-outline-muted);
+
+  --color-gold: var(--cq-gold);
+  --color-gold-soft: var(--cq-gold-soft);
+  --color-gold-dim: var(--cq-gold-dim);
+  --color-purple: var(--cq-purple);
+  --color-purple-soft: var(--cq-purple-soft);
+  --color-purple-bright: var(--cq-purple-bright);
+  --color-success: var(--cq-success);
+  --color-error: var(--cq-error);
+
+  --font-display: var(--cq-font-display);
+  --font-mono: var(--cq-font-mono);
+
+  --radius-pixel: 2px;
+
+  /* Desktop composition kicks in at 1200px per the responsive spec. */
+  --breakpoint-desktop: 1200px;
+}
+
+@layer base {
+  * {
+    min-width: 0;
+  }
+
+  html {
+    background-color: var(--cq-bg);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--cq-bg);
+    color: var(--cq-text);
+    font-family: var(--cq-font-mono);
+    font-size: 14px;
+    line-height: 1.6;
+    /* Never allow a sideways scroll on any breakpoint. */
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--cq-font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  ::selection {
+    background-color: var(--cq-purple);
+    color: #fff;
+  }
+
+  /* Scrollbar tuned to the HUD palette rather than left at OS default. */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--cq-surface-lowest); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--cq-surface-highest);
+    border: 2px solid var(--cq-surface-lowest);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--cq-outline-muted); }
+}
