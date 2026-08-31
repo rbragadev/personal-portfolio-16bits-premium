@@ -92,7 +92,7 @@ export const contributionsSection: Localized<ContributionsSection> = {
           'Blockchain records normally depend on a person to enter and vouch for the data — which is exactly where trust breaks down. I proved an embedded system can write to the chain autonomously, producing a vehicle history that is trustworthy because no human hand is in the loop.',
         facts: [
           'Six years of R&D, from first design to working pilot',
-          'A team of 20 developers coordinated through the project',
+          '20 developers across four squads — three in the US, one in Brazil',
         ],
         recognition: 'Patent Achievement at Ford Motors Company.',
       },
@@ -170,7 +170,7 @@ export const contributionsSection: Localized<ContributionsSection> = {
           'Registros em blockchain normalmente dependem de uma pessoa para inserir e atestar o dado — e é exatamente aí que a confiança quebra. Provei que um sistema embarcado consegue escrever na cadeia de forma autônoma, produzindo um histórico veicular confiável justamente porque não há mão humana no meio.',
         facts: [
           'Seis anos de P&D, do primeiro desenho ao piloto funcionando',
-          'Um time de 20 desenvolvedores coordenado ao longo do projeto',
+          '20 desenvolvedores em quatro squads — três nos EUA, um no Brasil',
         ],
         recognition: 'Patente conquistada na Ford Motors Company.',
       },

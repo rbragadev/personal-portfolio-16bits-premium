@@ -16,8 +16,15 @@ export type ScreenRoute = {
   icon: IconName;
   /** Cinematic screens run full-bleed with no sidebar. */
   cinematic?: boolean;
-  /** Reachable by Previous/Next but hidden from the menu. */
-  hiddenFromMenu?: boolean;
+  /**
+   * Reached by clicking into something rather than by paging — the quest
+   * detail hangs off the quest log. Drill-downs are kept out of the menu AND
+   * out of the Previous/Next sequence, so paging moves between top-level
+   * screens only.
+   */
+  drilldown?: boolean;
+  /** For a drill-down: the sequence screen it belongs to. */
+  parentPath?: string;
   /** Screen renders its own oversized title, so the bar stays compact. */
   titleInPage?: boolean;
 };
@@ -39,13 +46,16 @@ export const screens: ScreenRoute[] = [
   { number: '03', path: '/journey', icon: 'map' },
   { number: '04', path: '/skills', icon: 'medal', titleInPage: true },
   { number: '05', path: '/quests', icon: 'clipboard' },
-  { number: '06', path: '/quests/r10', icon: 'file', hiddenFromMenu: true },
+  { number: '06', path: '/quests/r10', icon: 'file', drilldown: true, parentPath: '/quests' },
   { number: '07', path: '/side-quests', icon: 'sparkles', titleInPage: true },
   { number: '08', path: '/impact', icon: 'chart', titleInPage: true },
   { number: '09', path: '/contact', icon: 'at', cinematic: true },
 ];
 
-export const menuScreens = screens.filter((screen) => !screen.hiddenFromMenu);
+/** Top-level screens: what the menu lists and what Previous/Next walks. */
+export const sequence = screens.filter((screen) => !screen.drilldown);
+
+export const menuScreens = sequence;
 
 export const totalScreens = screens.length;
 
@@ -64,10 +74,29 @@ export const screenForPath = (pathname: string): ScreenRoute | undefined => {
   return index === -1 ? undefined : screens[index];
 };
 
+/**
+ * Previous/Next for the pager and the arrow keys.
+ *
+ * On a drill-down, Previous returns to the screen it hangs off and Next
+ * continues past it — so /quests/r10 goes back to Quests and forward to Side
+ * Quests, never sideways into another detail page.
+ */
 export const neighboursOf = (pathname: string) => {
-  const index = indexOfPath(pathname);
+  const screen = screenForPath(pathname);
+  if (!screen) return { previous: undefined, next: undefined };
+
+  if (screen.drilldown) {
+    const parent = sequence.findIndex((entry) => entry.path === screen.parentPath);
+    if (parent === -1) return { previous: undefined, next: undefined };
+    return {
+      previous: sequence[parent],
+      next: parent < sequence.length - 1 ? sequence[parent + 1] : undefined,
+    };
+  }
+
+  const index = sequence.findIndex((entry) => entry.path === screen.path);
   return {
-    previous: index > 0 ? screens[index - 1] : undefined,
-    next: index !== -1 && index < screens.length - 1 ? screens[index + 1] : undefined,
+    previous: index > 0 ? sequence[index - 1] : undefined,
+    next: index !== -1 && index < sequence.length - 1 ? sequence[index + 1] : undefined,
   };
 };

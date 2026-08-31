@@ -75,19 +75,30 @@ export const artwork = {
 /* ---------------------------------------------------------------------------
    Avatar.
 
-   Every character portrait Stitch generated is an invented persona with the
-   name baked into the artwork ("Elara Vance / Master Code Weaver / LVL 45",
-   "ARCHITECT: ELARA / LVL 99"). None of them are Raphael, so none ship as his
-   profile by default — the sidebar renders a pixel HUD frame with an icon,
-   exactly like Stitch screens 04 and 08.
+   A pixel-art portrait of Raphael, prepared from his own artwork by
+   `scripts/prepare-avatar.py` — which swaps the source's tan background for
+   the project surface colour and crops to head-and-shoulders.
 
-   To use a real photo or avatar: drop the file in public/assets/stitch/ and
-   set `avatar` to the object below instead of `null`.
+   192px is 1:1 device pixels at the 96 CSS px the sidebar renders, so it stays
+   crisp on retina without the browser having to invent detail.
+
+   None of Stitch's generated portraits are used: every one is an invented
+   persona with a fabricated name baked into the artwork ("Elara Vance /
+   Master Code Weaver / LVL 45", "ARCHITECT: ELARA / LVL 99").
+
+   Set this back to `null` and the Avatar falls back to the icon treatment from
+   Stitch screens 04 and 08.
    --------------------------------------------------------------------------- */
 
-export const avatar: FramedAsset | null = null;
+export const avatar: FramedAsset | null = {
+  src: '/assets/stitch/avatar.png',
+  alt: 'Pixel-art portrait of Raphael Braga',
+  focus: 'center center',
+  zoom: 1,
+  scrim: 0,
+};
 
-/** Ready to enable — the one Stitch portrait with no invented name in-frame. */
+/** Kept available if a generated portrait is ever preferred over the real one. */
 export const stitchAvatarPlaceholder: FramedAsset = {
   src: '/assets/stitch/avatar-engineer.jpg',
   alt: 'Pixel-art portrait of a developer at a desk',

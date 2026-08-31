@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { avatar } from '../../config/assets';
+import { useUi } from '../../content';
 import { Icon } from './Icon';
 
 type AvatarProps = { className?: string };
@@ -17,6 +18,7 @@ type AvatarProps = { className?: string };
  */
 export function Avatar({ className = 'size-24' }: AvatarProps) {
   const [failed, setFailed] = useState(false);
+  const ui = useUi();
   const portrait = failed ? null : avatar;
 
   return (
@@ -26,9 +28,9 @@ export function Avatar({ className = 'size-24' }: AvatarProps) {
       {portrait ? (
         <img
           src={portrait.src}
-          alt={portrait.alt}
+          alt={ui.avatarAlt}
           onError={() => setFailed(true)}
-          className="cq-pixelated size-full object-cover"
+          className="size-full object-cover"
           style={{
             objectPosition: portrait.focus,
             transform: portrait.zoom === 1 ? undefined : `scale(${portrait.zoom})`,

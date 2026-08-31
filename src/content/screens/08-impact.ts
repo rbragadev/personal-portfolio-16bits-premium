@@ -40,9 +40,9 @@ export const impactScreen: Localized<ImpactScreen> = {
       },
       {
         label: 'TEAM LEADERSHIP',
-        value: 'A TEAM OF 20',
+        value: '20 ACROSS 4 SQUADS',
         caption:
-          'Coordinated 20 developers through six years of R&D at Ford, at times as Scrum Master, and later ran developer training on best practices, cybersecurity and mobile.',
+          'Coordinated 20 developers at Ford — three squads in the United States, one in Brazil — through six years of R&D, at times as Scrum Master, and later ran developer training on best practices, cybersecurity and mobile.',
       },
       {
         label: 'MEASURED IMPACT',
@@ -95,9 +95,9 @@ export const impactScreen: Localized<ImpactScreen> = {
       },
       {
         label: 'LIDERANÇA DE TIME',
-        value: 'UM TIME DE 20',
+        value: '20 EM 4 SQUADS',
         caption:
-          'Coordenei 20 desenvolvedores ao longo de seis anos de P&D na Ford, por vezes como Scrum Master, e depois conduzi treinamentos sobre boas práticas, cibersegurança e mobile.',
+          'Coordenei 20 desenvolvedores na Ford — três squads nos Estados Unidos, um no Brasil — ao longo de seis anos de P&D, por vezes como Scrum Master, e depois conduzi treinamentos sobre boas práticas, cibersegurança e mobile.',
       },
       {
         label: 'IMPACTO MENSURADO',

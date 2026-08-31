@@ -39,6 +39,7 @@ export type UiStrings = {
   };
   questNotFound: { title: string; body: string };
   techStack: string;
+  avatarAlt: string;
 };
 
 export const ui: Localized<UiStrings> = {
@@ -82,6 +83,7 @@ export const ui: Localized<UiStrings> = {
       body: 'No case study is recorded for this quest yet.',
     },
     techStack: 'TECH STACK',
+    avatarAlt: 'Pixel-art portrait of Raphael Braga',
   },
 
   pt: {
@@ -124,5 +126,6 @@ export const ui: Localized<UiStrings> = {
       body: 'Ainda não há um dossiê registrado para esta missão.',
     },
     techStack: 'STACK',
+    avatarAlt: 'Retrato em pixel art de Raphael Braga',
   },
 };

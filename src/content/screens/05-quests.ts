@@ -155,13 +155,13 @@ export const questLogScreen: Localized<QuestLogScreen> = {
         location: 'Brazil',
         status: 'complete',
         summary:
-          'Six years of blockchain R&D proving that an embedded system can record trustworthy vehicle data autonomously — leading the architecture and a 20-person team.',
+          'Six years of blockchain R&D proving that an embedded system can record trustworthy vehicle data autonomously — leading the architecture and 20 people across four squads in two countries.',
         journeySummary:
           'The first serious quest. Blockchain R&D for vehicle history, leading architecture and a team of 20.',
         highlights: [
           'Proved that blockchain can be written to autonomously from embedded systems, recording trustworthy data with no human in the loop',
           'Led the engineering and architecture design of the research contract, from initial design through requirements and operational planning',
-          'Coordinated a team of 20 developers across the project stages, at times acting as Scrum Master',
+          'Coordinated a team of 20 developers — three squads in the United States and one in Brazil — across the project stages, at times acting as Scrum Master',
           'Built the pilot project hands-on, on both the frontend and the smart contract',
           'Earned a Patent Achievement at Ford Motors Company',
         ],
@@ -297,13 +297,13 @@ export const questLogScreen: Localized<QuestLogScreen> = {
         location: 'Brasil',
         status: 'complete',
         summary:
-          'Seis anos de P&D em blockchain provando que um sistema embarcado pode registrar dados veiculares confiáveis de forma autônoma — liderando a arquitetura e um time de 20 pessoas.',
+          'Seis anos de P&D em blockchain provando que um sistema embarcado pode registrar dados veiculares confiáveis de forma autônoma — liderando a arquitetura e 20 pessoas em quatro squads, em dois países.',
         journeySummary:
           'A primeira missão séria. P&D em blockchain para histórico veicular, liderando arquitetura e um time de 20.',
         highlights: [
           'Provei que a blockchain pode ser escrita de forma autônoma a partir de sistemas embarcados, registrando dados confiáveis sem humano no meio do caminho',
           'Liderei a engenharia e o desenho da arquitetura do contrato de pesquisa, do desenho inicial ao levantamento de requisitos e planejamento operacional',
-          'Coordenei um time de 20 desenvolvedores ao longo das etapas do projeto, atuando por vezes como Scrum Master',
+          'Coordenei um time de 20 desenvolvedores — três squads nos Estados Unidos e um no Brasil — ao longo das etapas do projeto, atuando por vezes como Scrum Master',
           'Construí o projeto piloto na mão, tanto no frontend quanto no smart contract',
           'Conquistei uma patente na Ford Motors Company',
         ],

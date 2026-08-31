@@ -49,6 +49,11 @@ Output directory : dist
 Navigation: sidebar (desktop) / drawer (below 1024px), Previous–Next pager,
 Left/Right arrow keys, Enter on the start screen, Escape to close the drawer.
 
+Screen 06 is a **drill-down**, not a step: you reach it by clicking a quest.
+Paging therefore skips it — Quests goes forward to Side Quests, and from a
+quest detail Previous returns to the Quest Log while Next continues to Side
+Quests. Marked with `drilldown: true` in `src/app/navigation.ts`.
+
 ## Languages
 
 The site ships in **English and Portuguese**, switched by the EN/PT control in
@@ -197,25 +202,36 @@ and 08). Every character portrait Stitch generated is an invented persona with
 the name baked into the artwork — "Elara Vance / Master Code Weaver / LVL 45",
 "ARCHITECT: ELARA / LVL 99" — so none of them ship as Raphael.
 
-To use a real photo, convert it first — a photograph dropped into a pixel-art
-UI reads as a mistake:
+`public/assets/stitch/avatar.png` is a pixel-art portrait of Raphael, prepared
+from his own artwork. Two scripts cover the two starting points (both need
+Pillow):
+
+**Already pixel art** — `scripts/prepare-avatar.py`. Swaps the source's tan
+background for the project surface colour, crops to head-and-shoulders, writes
+192px (1:1 device pixels at the 96 CSS px the sidebar renders):
 
 ```bash
-python3 scripts/pixelize-avatar.py ~/path/to/photo.jpg --vignette
-# → public/assets/stitch/avatar.png
+python3 scripts/prepare-avatar.py ~/portrait.png --crop 0.47,0.36,0.70
 ```
 
-The script squares the crop around the face, downsamples to a 96px grid, grades
-the shadows toward the project's navy and the highlights toward warm gold, then
-reduces the palette. `--focus X,Y` moves the crop, `--size` trades blockiness
-for detail, `--tint` sets how hard it leans into the theme. Requires Pillow.
+The background swap is a *gradient-following* flood fill, not a colour match:
+the blazer and the background are only ~12 apart in RGB, so any tolerance keyed
+to the background colour eats the jacket. Spreading only between similar
+neighbours follows the soft halo instead and stops at the dark contour the art
+already has. `--protect cx,cy,rx,ry` guards the shirt, which is bright and
+desaturated enough to read as background once the fill reaches the collar.
 
-Then point `avatar` in `src/config/assets.ts` at `/assets/stitch/avatar.png`.
-If that file is ever missing, `Avatar` falls back to the icon rather than
-leaving a broken image on every screen.
+**A plain photograph** — `scripts/pixelize-avatar.py`. Squares the crop around
+the face, downsamples, grades shadows toward navy and highlights toward warm
+gold, then reduces the palette. Mid-tones are left alone, so skin keeps its own
+colour; a flat duotone over a face reads as a filter, not as pixel art.
 
-`stitchAvatarPlaceholder` in the same file is a ready-to-use fallback if a
-generated pixel portrait is preferred over a real photo.
+Set `avatar` in `src/config/assets.ts` back to `null` for the icon treatment
+from Stitch screens 04 and 08. If the file is ever missing, `Avatar` falls back
+to that icon rather than leaving a broken image on every screen.
+
+None of Stitch's generated portraits ship: every one is an invented persona
+with a fabricated name baked into the artwork.
 
 ## Design tokens
 
