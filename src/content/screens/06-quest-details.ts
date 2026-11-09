@@ -84,7 +84,7 @@ export const questDetailScreen: Localized<QuestDetailScreen> = {
       },
       {
         id: 'ford',
-        title: 'Ford Motors Company',
+        title: 'Ford Motor Company',
         subtitle: 'Autonomous Blockchain in Embedded Systems',
         challenge:
           'A blockchain record is only as trustworthy as the person typing into it — which is exactly where a vehicle history breaks down. The research question was whether an embedded system could write to the chain by itself, producing a record that is reliable because no human hand is in the loop. Six years spanning the proof, the architecture, a 20-person team, and the pilot itself.',
@@ -206,7 +206,7 @@ export const questDetailScreen: Localized<QuestDetailScreen> = {
       },
       {
         id: 'ford',
-        title: 'Ford Motors Company',
+        title: 'Ford Motor Company',
         subtitle: 'Blockchain autônoma em sistemas embarcados',
         challenge:
           'Um registro em blockchain só é tão confiável quanto a pessoa que digita nele — e é exatamente aí que um histórico veicular desmorona. A pergunta de pesquisa era se um sistema embarcado conseguiria escrever na cadeia sozinho, produzindo um registro confiável justamente porque não há mão humana no meio. Seis anos entre a prova de conceito, a arquitetura, um time de 20 pessoas e o piloto.',

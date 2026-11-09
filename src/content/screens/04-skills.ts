@@ -37,6 +37,7 @@ const blockchain: SkillGroup['items'] = [
   { name: 'Smart Contracts', level: 'strong' },
   { name: 'Rust', level: 'working' },
   { name: 'Go', level: 'working' },
+  { name: 'Hyperledger Fabric', level: 'working' },
 ];
 
 const cloud: SkillGroup['items'] = [
@@ -48,6 +49,8 @@ const cloud: SkillGroup['items'] = [
   { name: 'Docker' },
   { name: 'Kubernetes' },
   { name: 'CI/CD' },
+  { name: 'Datadog' },
+  { name: 'Feature flags' },
 ];
 
 export const skillsScreen: Localized<SkillsScreen> = {
@@ -68,6 +71,7 @@ export const skillsScreen: Localized<SkillsScreen> = {
           { name: 'System Design' },
           { name: 'SOLID / Clean Code / TDD' },
           { name: 'SQL' },
+          { name: 'PostgreSQL' },
           { name: 'Prisma' },
           { name: 'MongoDB' },
           { name: 'Redis' },
@@ -86,6 +90,8 @@ export const skillsScreen: Localized<SkillsScreen> = {
           { name: 'Inference architecture' },
           { name: 'Inference cost optimisation' },
           { name: 'RAG' },
+          { name: 'MCP (Model Context Protocol)' },
+          { name: 'Claude Code' },
         ],
       },
       {
@@ -119,6 +125,7 @@ export const skillsScreen: Localized<SkillsScreen> = {
           { name: 'System Design' },
           { name: 'SOLID / Clean Code / TDD' },
           { name: 'SQL' },
+          { name: 'PostgreSQL' },
           { name: 'Prisma' },
           { name: 'MongoDB' },
           { name: 'Redis' },
@@ -137,6 +144,8 @@ export const skillsScreen: Localized<SkillsScreen> = {
           { name: 'Arquitetura de inferência' },
           { name: 'Otimização de custo de inferência' },
           { name: 'RAG' },
+          { name: 'MCP (Model Context Protocol)' },
+          { name: 'Claude Code' },
         ],
       },
       {

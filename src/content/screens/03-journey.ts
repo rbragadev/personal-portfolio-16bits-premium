@@ -76,7 +76,18 @@ export const journeyScreen: Localized<JourneyScreen> = {
       { kind: 'quest', id: 'xvia' },
       { kind: 'quest', id: 'willowtree' },
       { kind: 'quest', id: 'r10' },
+      { kind: 'quest', id: 'alianca-divergente' },
       { kind: 'quest', id: 'aws-consultancy' },
+      {
+        kind: 'milestone',
+        id: 'simteam',
+        when: '2026',
+        title: 'Founded SimTeam',
+        description:
+          'My own product, built with a small team: a multi-tenant SaaS of WhatsApp AI agents for small businesses, live since mid-2026 — agents that take real actions under per-action policies and human approvals.',
+        icon: 'code',
+      },
+      { kind: 'quest', id: 'ux-group' },
     ],
   },
 
@@ -131,7 +142,18 @@ export const journeyScreen: Localized<JourneyScreen> = {
       { kind: 'quest', id: 'xvia' },
       { kind: 'quest', id: 'willowtree' },
       { kind: 'quest', id: 'r10' },
+      { kind: 'quest', id: 'alianca-divergente' },
       { kind: 'quest', id: 'aws-consultancy' },
+      {
+        kind: 'milestone',
+        id: 'simteam',
+        when: '2026',
+        title: 'Fundei o SimTeam',
+        description:
+          'Meu próprio produto, construído com um time pequeno: um SaaS multi-tenant de agentes de IA no WhatsApp para pequenos negócios, no ar desde meados de 2026 — agentes que executam ações reais sob políticas por ação e aprovação humana.',
+        icon: 'code',
+      },
+      { kind: 'quest', id: 'ux-group' },
     ],
   },
 };

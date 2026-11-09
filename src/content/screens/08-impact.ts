@@ -36,13 +36,13 @@ export const impactScreen: Localized<ImpactScreen> = {
         label: 'EXPERIENCE',
         value: '12+ YEARS',
         caption:
-          'Full-stack product engineering, mobile, blockchain R&D and AWS consultancy — across digital government, sports data, commerce, AI and automotive.',
+          'Full-stack product engineering, mobile, blockchain R&D and AWS consultancy — across iGaming, digital government, sports data, commerce, AI and automotive.',
       },
       {
         label: 'TEAM LEADERSHIP',
         value: '20 ACROSS 4 SQUADS',
         caption:
-          'Coordinated 20 developers at Ford — three squads in the United States, one in Brazil — through six years of R&D, at times as Scrum Master, and later ran developer training on best practices, cybersecurity and mobile.',
+          'Coordinated 20 developers at Ford — three squads in the United States, one in Brazil — through six years of R&D, at times as Scrum Master, and later ran developer training on best practices, cybersecurity and mobile. Today I am Tech Lead of a live casino platform at UX Group.',
       },
       {
         label: 'MEASURED IMPACT',
@@ -91,13 +91,13 @@ export const impactScreen: Localized<ImpactScreen> = {
         label: 'EXPERIÊNCIA',
         value: '12+ ANOS',
         caption:
-          'Engenharia de produto full-stack, mobile, P&D em blockchain e consultoria AWS — passando por governo digital, dados esportivos, comércio, IA e automotivo.',
+          'Engenharia de produto full-stack, mobile, P&D em blockchain e consultoria AWS — passando por iGaming, governo digital, dados esportivos, comércio, IA e automotivo.',
       },
       {
         label: 'LIDERANÇA DE TIME',
         value: '20 EM 4 SQUADS',
         caption:
-          'Coordenei 20 desenvolvedores na Ford — três squads nos Estados Unidos, um no Brasil — ao longo de seis anos de P&D, por vezes como Scrum Master, e depois conduzi treinamentos sobre boas práticas, cibersegurança e mobile.',
+          'Coordenei 20 desenvolvedores na Ford — três squads nos Estados Unidos, um no Brasil — ao longo de seis anos de P&D, por vezes como Scrum Master, e depois conduzi treinamentos sobre boas práticas, cibersegurança e mobile. Hoje sou Tech Lead de uma plataforma de cassino ao vivo na UX Group.',
       },
       {
         label: 'IMPACTO MENSURADO',

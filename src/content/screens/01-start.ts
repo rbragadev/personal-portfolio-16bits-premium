@@ -32,9 +32,9 @@ export const startScreen: Localized<StartScreen> = {
     screenNumber: '01',
     screenLabel: 'START SCREEN',
     title: 'SENIOR SOFTWARE ENGINEER',
-    subtitle: 'FULLSTACK · BLOCKCHAIN · MOBILE',
+    subtitle: 'FULLSTACK · AI AGENTS · BLOCKCHAIN',
     tagline: 'I turn complex ideas into digital products,\nsystems and scalable solutions.',
-    disciplines: 'React · React Native · Node · NestJS · Solidity · AWS',
+    disciplines: 'TypeScript · Node · NestJS · React · React Native · AI Agents · AWS',
     ctaLabel: 'PRESS START',
     hud: {
       levelLabel: 'LVL',
@@ -51,9 +51,9 @@ export const startScreen: Localized<StartScreen> = {
     screenNumber: '01',
     screenLabel: 'TELA INICIAL',
     title: 'ENGENHEIRO DE SOFTWARE SÊNIOR',
-    subtitle: 'FULLSTACK · BLOCKCHAIN · MOBILE',
+    subtitle: 'FULLSTACK · AI AGENTS · BLOCKCHAIN',
     tagline: 'Transformo ideias complexas em produtos digitais,\nsistemas e soluções que escalam.',
-    disciplines: 'React · React Native · Node · NestJS · Solidity · AWS',
+    disciplines: 'TypeScript · Node · NestJS · React · React Native · AI Agents · AWS',
     ctaLabel: 'PRESS START',
     hud: {
       levelLabel: 'LVL',

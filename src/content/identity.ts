@@ -16,6 +16,12 @@ export const contactLinks: ContactLink[] = [
     icon: 'link',
   },
   {
+    label: 'GitHub',
+    display: 'github.com/rbragadev',
+    href: 'https://github.com/rbragadev',
+    icon: 'link',
+  },
+  {
     label: 'Portfolio',
     display: 'raphael-braga-main-porfolio.vercel.app',
     href: 'https://raphael-braga-main-porfolio.vercel.app',
@@ -46,23 +52,23 @@ export const identity: Localized<Identity> = {
     name: 'Raphael Braga',
     nameLines: ['RAPHAEL', 'BRAGA'],
     title: 'Senior Software Engineer',
-    roles: ['FullStack', 'Blockchain', 'Mobile'],
+    roles: ['FullStack', 'AI Agents', 'Blockchain'],
     rank: 'LVL 12+ ENGINEER',
     level: '12+',
     location: 'Belo Horizonte, BR',
     positioning:
-      'I turn complex product and engineering problems into working, scalable digital products — across backend, frontend, mobile, cloud, blockchain and architecture.',
+      'I turn complex product and engineering problems into working, scalable digital products — across backend, frontend, mobile, cloud, AI agents, blockchain and architecture.',
   },
   pt: {
     name: 'Raphael Braga',
     nameLines: ['RAPHAEL', 'BRAGA'],
     title: 'Engenheiro de Software Sênior',
-    roles: ['FullStack', 'Blockchain', 'Mobile'],
+    roles: ['FullStack', 'AI Agents', 'Blockchain'],
     rank: 'LVL 12+ ENGENHEIRO',
     level: '12+',
     location: 'Belo Horizonte, BR',
     positioning:
-      'Transformo problemas complexos de produto e engenharia em produtos digitais que funcionam e escalam — backend, frontend, mobile, cloud, blockchain e arquitetura.',
+      'Transformo problemas complexos de produto e engenharia em produtos digitais que funcionam e escalam — backend, frontend, mobile, cloud, agentes de IA, blockchain e arquitetura.',
   },
 };
 
@@ -77,7 +83,7 @@ export const credentials: Localized<Credentials> = {
   en: {
     languages: [
       { name: 'Portuguese', level: 'Native / Bilingual' },
-      { name: 'English', level: 'Native / Bilingual' },
+      { name: 'English', level: 'Fluent (C1)' },
     ],
     certifications: [
       'Blockchain Development',
@@ -93,12 +99,12 @@ export const credentials: Localized<Credentials> = {
         dates: '2021 – 2024',
       },
     ],
-    award: { title: 'Patent Achievement', issuer: 'Ford Motors Company' },
+    award: { title: 'Patent Achievement', issuer: 'Ford Motor Company' },
   },
   pt: {
     languages: [
       { name: 'Português', level: 'Nativo / Bilíngue' },
-      { name: 'Inglês', level: 'Nativo / Bilíngue' },
+      { name: 'Inglês', level: 'Fluente (C1)' },
     ],
     certifications: [
       'Desenvolvimento Blockchain',
@@ -114,6 +120,6 @@ export const credentials: Localized<Credentials> = {
         dates: '2021 – 2024',
       },
     ],
-    award: { title: 'Patente conquistada', issuer: 'Ford Motors Company' },
+    award: { title: 'Patente conquistada', issuer: 'Ford Motor Company' },
   },
 };

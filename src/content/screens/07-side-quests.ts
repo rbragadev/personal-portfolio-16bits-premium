@@ -30,20 +30,38 @@ export const sideQuestsScreen: Localized<SideQuestsScreen> = {
     statusValue: 'ACTIVE',
     sideProjects: [
       {
+        id: 'simteam',
+        name: 'SIMTEAM',
+        subtitle: 'AI agents for small businesses · Live product',
+        summary:
+          'My own SaaS, built with a small team: multi-tenant WhatsApp AI agents that serve small businesses’ customers — booking, rescheduling and cancelling appointments, a finance agent, and a handoff to a human when needed. Every action an agent can take is declared in code and checked by a per-action policy, with human approval for sensitive actions and a full audit trail.',
+        tech: ['TypeScript', 'NestJS', 'Mastra', 'AI Agents', 'WhatsApp', 'RAG / Tools / Governance'],
+        href: 'https://simteam.web.app/',
+      },
+      {
+        id: 'lictor',
+        name: 'LICTOR',
+        subtitle: 'Open-source authorization for AI agents',
+        summary:
+          'An authorization kernel that sits between AI agents and real-world side effects — payments, merges, deletions, emails — and decides, action by action, what an agent is allowed to do. Currently in the architecture phase: ADRs, roadmap and technical docs.',
+        tech: ['Rust', 'Cedar', 'MCP', 'TypeScript'],
+      },
+      {
+        id: 'skillforge',
+        name: 'SKILLFORGE',
+        subtitle: 'Claude Code skills for engineering',
+        summary:
+          'A personal, versioned collection of Claude Code skills for repeatable engineering workflows. The first one, gcp-audit, is a read-only Google Cloud infrastructure and FinOps inventory that generates HTML reports, Markdown summaries and JSON snapshots.',
+        tech: ['Claude Code', 'Agent skills', 'GCP', 'FinOps'],
+        href: 'https://github.com/rbragadev/skillforge',
+      },
+      {
         id: 'ninho',
         name: 'NINHO',
         subtitle: 'Family Safety Platform',
         summary:
           'Mobile family-safety product focused on parent and child experiences, device pairing, location, alerts and safety flows.',
         tech: ['React Native / Expo', 'NestJS', 'PostgreSQL', 'Real-time product flows'],
-      },
-      {
-        id: 'ai-agent-platform',
-        name: 'AI AGENT PLATFORM',
-        subtitle: 'Enterprise AI Infrastructure',
-        summary:
-          'Multi-tenant platform concept for configuring, governing, deploying and observing AI agents for different clients and use cases.',
-        tech: ['TypeScript', 'NestJS', 'Mastra', 'AI Agents', 'RAG / Tools / Governance'],
       },
       {
         id: 'feature-flags',
@@ -81,20 +99,38 @@ export const sideQuestsScreen: Localized<SideQuestsScreen> = {
     statusValue: 'ATIVO',
     sideProjects: [
       {
+        id: 'simteam',
+        name: 'SIMTEAM',
+        subtitle: 'Agentes de IA para pequenos negócios · Produto no ar',
+        summary:
+          'Meu próprio SaaS, construído com um time pequeno: agentes de IA multi-tenant no WhatsApp que atendem os clientes de pequenos negócios — marcam, remarcam e cancelam horários, um agente financeiro e transferência para um humano quando precisa. Toda ação que um agente pode executar é declarada em código e checada por uma política por ação, com aprovação humana para ações sensíveis e trilha de auditoria completa.',
+        tech: ['TypeScript', 'NestJS', 'Mastra', 'Agentes de IA', 'WhatsApp', 'RAG / Tools / Governança'],
+        href: 'https://simteam.web.app/',
+      },
+      {
+        id: 'lictor',
+        name: 'LICTOR',
+        subtitle: 'Autorização open source para agentes de IA',
+        summary:
+          'Um kernel de autorização entre agentes de IA e efeitos no mundo real — pagamentos, merges, exclusões, e-mails — que decide, ação por ação, o que um agente pode fazer. Em fase de arquitetura: ADRs, roadmap e documentação técnica.',
+        tech: ['Rust', 'Cedar', 'MCP', 'TypeScript'],
+      },
+      {
+        id: 'skillforge',
+        name: 'SKILLFORGE',
+        subtitle: 'Skills de Claude Code para engenharia',
+        summary:
+          'Uma coleção pessoal e versionada de skills do Claude Code para fluxos de engenharia repetíveis. A primeira, gcp-audit, faz um inventário somente leitura de infraestrutura e FinOps no Google Cloud e gera relatórios em HTML, resumos em Markdown e snapshots em JSON.',
+        tech: ['Claude Code', 'Agent skills', 'GCP', 'FinOps'],
+        href: 'https://github.com/rbragadev/skillforge',
+      },
+      {
         id: 'ninho',
         name: 'NINHO',
         subtitle: 'Plataforma de segurança familiar',
         summary:
           'Produto mobile de segurança familiar focado nas experiências de pais e filhos: pareamento de dispositivos, localização, alertas e fluxos de segurança.',
         tech: ['React Native / Expo', 'NestJS', 'PostgreSQL', 'Fluxos em tempo real'],
-      },
-      {
-        id: 'ai-agent-platform',
-        name: 'AI AGENT PLATFORM',
-        subtitle: 'Infraestrutura de IA corporativa',
-        summary:
-          'Conceito de plataforma multi-tenant para configurar, governar, implantar e observar agentes de IA para diferentes clientes e casos de uso.',
-        tech: ['TypeScript', 'NestJS', 'Mastra', 'Agentes de IA', 'RAG / Tools / Governança'],
       },
       {
         id: 'feature-flags',

@@ -42,6 +42,26 @@ export const questLogScreen: Localized<QuestLogScreen> = {
     /* Ordered by start date, newest first. */
     experiences: [
       {
+        id: 'ux-group',
+        company: 'UX Group',
+        role: 'Tech Lead',
+        dates: 'Sep 2026 – Present',
+        years: '2026–Present',
+        location: 'Belo Horizonte, BR',
+        status: 'in-progress',
+        summary:
+          'Technical leadership for the live casino platform across UX Group’s iGaming brands (Reals, BetGo, Bingo) — architecture, reliability and the roadmap that ties them together.',
+        journeySummary:
+          'Tech Lead in iGaming. A per-provider casino gateway, feature flags with Datadog and an engineering roadmap.',
+        highlights: [
+          'Leading the consolidation of the casino entry point into a per-provider gateway, standardising how game providers integrate with the core platform',
+          'Introducing feature-flag governance with Datadog, including a proof of concept for automatic payment-provider failover triggered by monitoring alerts, with back-office sync and audit logging',
+          'Turned architecture, reliability and security findings across the service fleet into an area-based engineering roadmap (epics, features and spikes) for Product/ARB prioritisation in Jira',
+          'Created a shared library of Claude Code skills for the engineering team and run developer training on feature flags',
+        ],
+        tech: ['Node.js', 'TypeScript', 'AWS', 'Datadog', 'Feature flags', 'Jira', 'Claude Code'],
+      },
+      {
         id: 'aws-consultancy',
         company: 'Elevata · Cloudary',
         role: 'AWS Consultant',
@@ -63,13 +83,32 @@ export const questLogScreen: Localized<QuestLogScreen> = {
         tech: ['AWS', 'AI Agents', 'LLM Inference', 'Cloud architecture', 'Cost optimisation'],
       },
       {
-        id: 'r10',
-        company: 'R10 Score',
+        id: 'alianca-divergente',
+        company: 'Aliança Divergente',
         role: 'Senior Software Engineer',
         dates: 'Mar 2025 – Present',
         years: '2025–Present',
         location: 'Belo Horizonte, BR',
         status: 'in-progress',
+        summary:
+          'Internal platforms and AI-powered products for Aliança Divergente and its “Mais que Resultados” business immersion programme.',
+        journeySummary:
+          'Internal platforms and applied AI: a financial hub on AWS and an enterprise LLM assistant.',
+        highlights: [
+          'Developing the Financial Hub, a full-stack financial management web app, with a CI/CD pipeline that deploys to AWS from the production branch',
+          'Building “Mais que Resultados”, an enterprise AI chat assistant, currently in pilot with internal users',
+          'Built a diagnostic report generator that turns participants’ form responses into personalised PDF assessments for the immersion programme',
+        ],
+        tech: ['TypeScript', 'React', 'Node.js', 'AWS', 'CI/CD', 'LLMs'],
+      },
+      {
+        id: 'r10',
+        company: 'R10 Score',
+        role: 'Senior Software Engineer · Sports Data Platform',
+        dates: 'Mar 2025 – Sep 2026',
+        years: '2025–2026',
+        location: 'Belo Horizonte, BR',
+        status: 'complete',
         summary:
           'Full-stack engineering inside a large-scale sports data ecosystem, from entity modelling through to APIs and internal services.',
         journeySummary:
@@ -148,7 +187,7 @@ export const questLogScreen: Localized<QuestLogScreen> = {
       },
       {
         id: 'ford',
-        company: 'Ford Motors Company',
+        company: 'Ford Motor Company',
         role: 'FullStack Developer / Blockchain Developer',
         dates: 'Feb 2017 – Feb 2023',
         years: '2017–2023',
@@ -163,7 +202,7 @@ export const questLogScreen: Localized<QuestLogScreen> = {
           'Led the engineering and architecture design of the research contract, from initial design through requirements and operational planning',
           'Coordinated a team of 20 developers — three squads in the United States and one in Brazil — across the project stages, at times acting as Scrum Master',
           'Built the pilot project hands-on, on both the frontend and the smart contract',
-          'Earned a Patent Achievement at Ford Motors Company',
+          'Earned a Patent Achievement at Ford Motor Company',
         ],
         tech: ['Solidity', 'Smart Contracts', 'Blockchain', 'JavaScript', 'React'],
       },
@@ -183,6 +222,26 @@ export const questLogScreen: Localized<QuestLogScreen> = {
     alsoKnownAs: 'também listada como',
 
     experiences: [
+      {
+        id: 'ux-group',
+        company: 'UX Group',
+        role: 'Tech Lead',
+        dates: 'Set 2026 – Atual',
+        years: '2026–Atual',
+        location: 'Belo Horizonte, BR',
+        status: 'in-progress',
+        summary:
+          'Liderança técnica da plataforma de cassino ao vivo das marcas de iGaming da UX Group (Reals, BetGo, Bingo) — arquitetura, confiabilidade e o roadmap que amarra tudo.',
+        journeySummary:
+          'Tech Lead em iGaming. Gateway de cassino por provedor, feature flags com Datadog e roadmap de engenharia.',
+        highlights: [
+          'Lidero a consolidação da porta de entrada do cassino em um gateway por provedor, padronizando como os provedores de jogos se integram à plataforma',
+          'Estou implantando a governança de feature flags com Datadog, incluindo uma prova de conceito de troca automática de provedor de pagamento disparada por alertas de monitoramento, com sincronização no backoffice e log de auditoria',
+          'Transformei achados de arquitetura, confiabilidade e segurança da frota de serviços em um roadmap de engenharia por área (épicos, features e spikes) para priorização com Produto/ARB no Jira',
+          'Criei uma biblioteca compartilhada de skills do Claude Code para o time e conduzo treinamentos de feature flags para os devs',
+        ],
+        tech: ['Node.js', 'TypeScript', 'AWS', 'Datadog', 'Feature flags', 'Jira', 'Claude Code'],
+      },
       {
         id: 'aws-consultancy',
         company: 'Elevata · Cloudary',
@@ -205,13 +264,32 @@ export const questLogScreen: Localized<QuestLogScreen> = {
         tech: ['AWS', 'Agentes de IA', 'Inferência de LLM', 'Arquitetura cloud', 'Otimização de custo'],
       },
       {
-        id: 'r10',
-        company: 'R10 Score',
+        id: 'alianca-divergente',
+        company: 'Aliança Divergente',
         role: 'Senior Software Engineer',
         dates: 'Mar 2025 – Atual',
         years: '2025–Atual',
         location: 'Belo Horizonte, BR',
         status: 'in-progress',
+        summary:
+          'Plataformas internas e produtos com IA para a Aliança Divergente e o programa de imersão empresarial “Mais que Resultados”.',
+        journeySummary:
+          'Plataformas internas e IA aplicada: um hub financeiro na AWS e um assistente corporativo com LLM.',
+        highlights: [
+          'Desenvolvo o Financial Hub, uma aplicação web full-stack de gestão financeira, com pipeline de CI/CD que publica na AWS a partir da branch de produção',
+          'Construo o “Mais que Resultados”, um assistente de chat corporativo com IA, em piloto com usuários internos',
+          'Criei um gerador de diagnósticos que transforma as respostas de formulário dos participantes em avaliações em PDF personalizadas para a imersão',
+        ],
+        tech: ['TypeScript', 'React', 'Node.js', 'AWS', 'CI/CD', 'LLMs'],
+      },
+      {
+        id: 'r10',
+        company: 'R10 Score',
+        role: 'Senior Software Engineer · Sports Data Platform',
+        dates: 'Mar 2025 – Set 2026',
+        years: '2025–2026',
+        location: 'Belo Horizonte, BR',
+        status: 'complete',
         summary:
           'Engenharia full-stack dentro de um ecossistema de dados esportivos em larga escala, da modelagem das entidades até as APIs e os serviços internos.',
         journeySummary:
@@ -290,7 +368,7 @@ export const questLogScreen: Localized<QuestLogScreen> = {
       },
       {
         id: 'ford',
-        company: 'Ford Motors Company',
+        company: 'Ford Motor Company',
         role: 'FullStack Developer / Blockchain Developer',
         dates: 'Fev 2017 – Fev 2023',
         years: '2017–2023',
@@ -305,7 +383,7 @@ export const questLogScreen: Localized<QuestLogScreen> = {
           'Liderei a engenharia e o desenho da arquitetura do contrato de pesquisa, do desenho inicial ao levantamento de requisitos e planejamento operacional',
           'Coordenei um time de 20 desenvolvedores — três squads nos Estados Unidos e um no Brasil — ao longo das etapas do projeto, atuando por vezes como Scrum Master',
           'Construí o projeto piloto na mão, tanto no frontend quanto no smart contract',
-          'Conquistei uma patente na Ford Motors Company',
+          'Conquistei uma patente na Ford Motor Company',
         ],
         tech: ['Solidity', 'Smart Contracts', 'Blockchain', 'JavaScript', 'React'],
       },
